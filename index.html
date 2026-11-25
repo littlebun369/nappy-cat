@@ -1,1 +1,96 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nappy Space — A Little Space for Quiet Moments</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand">
+      <h1>Nappy Space</h1>
+      <p>A little space for quiet moments.</p>
+    </div>
+    <div class="weather" id="weather">
+      A little moment of calm
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p class="eyebrow">WELCOME TO OUR LITTLE WORLD</p>
+      <h2>Take a breath. Stay a little.</h2>
+      <p>
+        You don't come here to find out what will happen.
+        You come here to find a little kindness for what is happening now.
+      </p>
+    </section>
+
+    <nav class="room-navigation" aria-label="Choose a room">
+      <button class="room-tab active" data-room="misty">Misty</button>
+      <button class="room-tab" data-room="mochi">Mochi</button>
+      <button class="room-tab" data-room="susu">Susu</button>
+      <button class="room-tab" data-room="pudding">Pudding</button>
+      <button class="room-tab" data-room="coke">Coke</button>
+    </nav>
+
+    <section class="room-display" id="room-display">
+      <div class="room-scene" id="room-scene">
+        <p class="room-label">ROOM 01</p>
+        <h2 id="room-name">Misty</h2>
+        <p id="room-theme">Quietness & Acceptance</p>
+        <div class="character-placeholder" id="character">
+          Misty's little world
+        </div>
+        <p id="room-description">
+          A quiet corner to pause, breathe and simply be.
+        </p>
+      </div>
+    </section>
+
+    <section class="garapon-section">
+      <p class="eyebrow">A MOMENT OF REFLECTION</p>
+      <h2>The Garapon</h2>
+      <p>
+        64 little glass marbles. 64 ancient hexagrams.
+        One thought to take with you.
+      </p>
+
+      <div class="garapon-placeholder">
+        <div class="wooden-box">64</div>
+        <p>A little wooden box, waiting to turn.</p>
+      </div>
+
+      <button id="draw-button" class="main-button">
+        Draw a little thought
+      </button>
+
+      <div id="result" class="result" aria-live="polite">
+        Your little reflection will appear here.
+      </div>
+    </section>
+
+    <section class="cycle-section">
+      <p class="eyebrow">A CREATIVE INTERPRETATION</p>
+      <h2>3 · 6 · 9 · Cycle</h2>
+      <div class="cycle-grid">
+        <div><strong>3</strong><span>The Foundation</span></div>
+        <div><strong>6</strong><span>The Connection</span></div>
+        <div><strong>9</strong><span>The Message</span></div>
+        <div><strong>↻</strong><span>The Continuation</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Not many words. Just the right words, at the right moment.</p>
+    <p>Made one little detail at a time.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
