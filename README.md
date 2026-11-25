@@ -1,48 +1,35 @@
 # Nappy Space
 
-*A little space for quiet moments.*
+### A little space for quiet moments.
 
-Nappy Space is a small digital world with five cosy rooms, a collection of unusual little residents and their own quirky alien companions.
+Nappy Space is a little world created with a simple wish: to bring warmth, encouragement and comfort to those who may need them.
 
-Inspired by Japanese Zen interiors, gentle everyday moments and the ancient wisdom of the I Ching.
+Sometimes, the right words at the right moment can make a difference. A little courage, a gentle reminder, or simply a moment to feel understood.
 
-## The Five Rooms
+Meet our five little residents, explore their cosy rooms, and discover 64 thoughtful messages inspired by the I Ching.
+
+And if you don't need any words today, that's perfectly fine too. Just stay a little, enjoy the quiet, and let your heart feel warm.
+
+## Our Little Residents
 
 - **Misty** — Quietness & Acceptance
 - **Mochi** — Love & Connection
 - **Susu** — Hope & New Beginnings
 - **Pudding** — Letting Go & Rest
-- **Coke** — Journeys & Possibilities
+- **Cream** — Journeys & Possibilities
 
-Each resident has a unique personality and a little alien companion of their own.
+Each has a cosy room and a little Q-style alien toy companion.
 
-## The Garapon
+## 64 Little Messages
 
-A traditional Japanese-style wooden rotating box brings together 64 Morandi-coloured glass marbles.
+Inspired by the 64 I Ching hexagrams, each marble carries a thoughtful message in English and Traditional Chinese.
 
-Each marble corresponds to one of the 64 I Ching hexagrams, offering a modern reflection in English and Traditional Chinese.
+Not fortune-telling, just little reflections for life's different moments.
 
-Not fortune-telling. Just a little thought to take with you.
+## Our Little Wish
 
-## 3 · 6 · 9 · Cycle
+To reach someone who needs a little warmth, courage or comfort — at the right time, in the right moment.
 
-- **3** — The Foundation
-- **6** — The Connection
-- **9** — The Message
-- **Cycle** — The Continuation
+And if all you need is a quiet place to pause, you're welcome here too.
 
-A creative interpretation inspired by the structure of the I Ching.
-
-## Our Philosophy
-
-You don't come here to find out what will happen.
-
-You come here to find a little kindness for what is happening now.
-
-Not many words. Just the right words, at the right moment.
-
-No pressure. No tasks. Just a little world to visit and enjoy.
-
----
-
-*A small creative project, built one little detail at a time.*
+**Not many words. Just the right words, at the right moment.**
