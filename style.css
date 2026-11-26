@@ -140,6 +140,79 @@ main {
   color: var(--muted);
 }
 
+
+/* Misty - Quiet Wooden Zen Room */
+
+.room-scene {
+  position: relative;
+  min-height: 390px;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 0;
+  text-align: center;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.15),
+      transparent 65%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #d5c2a5 0px,
+      #d5c2a5 45px,
+      #cdb99b 46px,
+      #cdb99b 48px
+    );
+
+  transition: background 0.3s;
+}
+
+/* Wooden floor */
+.room-scene::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 105px;
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      #b8a184 0px,
+      #b8a184 28px,
+      #a99073 29px,
+      #a99073 31px
+    );
+
+  border-top: 5px solid #a68e72;
+}
+
+/* Hide room text without removing HTML */
+.room-label,
+#room-name,
+#room-theme,
+#room-description {
+  display: none;
+}
+
+/* Character area - temporary empty space */
+.character-placeholder {
+  position: relative;
+  z-index: 2;
+  width: 170px;
+  height: 170px;
+  margin: 90px auto 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 0;
+  color: transparent;
+}
+
+
 .room-scene h2 {
   font-size: 36px;
   margin: 10px 0 0;
