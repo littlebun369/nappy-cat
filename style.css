@@ -296,3 +296,93 @@ footer {
   }
 }
 
+/* One little glass marble beside each reflection */
+
+.reflection-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  text-align: left;
+  padding: 12px;
+}
+
+.marble-display {
+  flex: 0 0 110px;
+  text-align: center;
+}
+
+.glass-marble {
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 19px;
+  font-weight: 800;
+  background:
+    radial-gradient(circle at 28% 23%,
+      rgba(255,255,255,0.95) 0%,
+      rgba(255,255,255,0.45) 9%,
+      transparent 25%),
+    radial-gradient(circle at 35% 30%,
+      #ffffff 0%,
+      var(--marble-colour) 35%,
+      #756f68 100%);
+  border: 2px solid rgba(255,255,255,0.8);
+  box-shadow:
+    inset -7px -9px 15px rgba(60,50,40,0.18),
+    inset 5px 5px 12px rgba(255,255,255,0.55),
+    0 8px 18px rgba(80,65,50,0.15);
+  animation: marbleAppear 0.7s ease both;
+}
+
+.marble-display small {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+
+.reflection-message {
+  flex: 1;
+}
+
+.reflection-message h3 {
+  margin: 0 0 4px;
+  font-size: 23px;
+}
+
+.hexagram-english {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.message-english {
+  line-height: 1.6;
+}
+
+.message-chinese {
+  line-height: 1.9;
+}
+
+@keyframes marbleAppear {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .reflection-layout {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+  }
+}
+
