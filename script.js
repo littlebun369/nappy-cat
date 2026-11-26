@@ -421,7 +421,7 @@ if (garaponHandle) {
       setTimeout(() => {
         fallingMarble.remove();
         drawReflection();
-      }, 700);
+      }, 1000);
 
     }, 850);
 
