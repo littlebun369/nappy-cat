@@ -886,9 +886,9 @@ background: radial-gradient(
   position: absolute;
   left: 15px;
   bottom: 0;
-  width: 100px;
-  height: 85px;
-  background: #C9C9C4;
+  width: 104px;
+  height: 92px;
+  background: #B8B9B3;
   border-radius: 50%;
   z-index: 1;
 }
@@ -901,7 +901,7 @@ background: radial-gradient(
   left: 25px;
   width: 80px;
   height: 80px;
-  background: #C9C9C4;
+  background: #D6D6D1;
   border-radius: 50%;
   z-index: 3;
 }
@@ -913,7 +913,7 @@ background: radial-gradient(
   top: -8px;
   width: 27px;
   height: 38px;
-  background: #C9C9C4;
+  background: #D6D6D1;
   clip-path: polygon(50% 0, 100% 100%, 0 100%);
   z-index: 2;
 }
