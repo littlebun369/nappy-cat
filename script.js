@@ -354,27 +354,25 @@ if (drawButton && result) {
     ];
 
     const [number, chineseName, englishName, englishMessage, chineseMessage] = item;
+    const marbleColour = getMarbleColour(number);
 
+    result.innerHTML = `
+      <div class="reflection-layout">
+        <div class="marble-display">
+          <div class="glass-marble" style="--marble-colour: ${marbleColour}">
+            <span>${number}</span>
+          </div>
+          <small>MARBLE ${number}</small>
+        </div>
 
-const [number, chineseName, englishName, englishMessage, chineseMessage] = item;
-const marbleColour = getMarbleColour(number);
-
-result.innerHTML = `
-  <div class="reflection-layout">
-    <div class="marble-display">
-      <div class="glass-marble" style="--marble-colour: ${marbleColour}">
-        <span>${number}</span>
+        <div class="reflection-message">
+          <h3>${chineseName}</h3>
+          <p class="hexagram-english">${englishName}</p>
+          <p class="message-english"><strong>${englishMessage}</strong></p>
+          <p class="message-chinese">${chineseMessage}</p>
+        </div>
       </div>
-      <small>MARBLE ${number}</small>
-    </div>
-
-    <div class="reflection-message">
-      <h3>${chineseName}</h3>
-      <p class="hexagram-english">${englishName}</p>
-      <p class="message-english"><strong>${englishMessage}</strong></p>
-      <p class="message-chinese">${chineseMessage}</p>
-    </div>
-  </div>
-`;
-
+    `;
+  });
+}
 
