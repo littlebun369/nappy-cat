@@ -376,3 +376,24 @@ if (drawButton && result) {
   });
 } 
 
+/* Garapon handle interaction */
+
+const garaponHandle = document.getElementById("garapon-handle");
+
+if (garaponHandle) {
+  garaponHandle.addEventListener("click", () => {
+
+    // Prevent repeated clicks during rotation
+    if (garaponHandle.classList.contains("is-turning")) {
+      return;
+    }
+
+    garaponHandle.classList.add("is-turning");
+
+    garaponHandle.addEventListener("animationend", () => {
+      garaponHandle.classList.remove("is-turning");
+    }, { once: true });
+
+  });
+}
+
