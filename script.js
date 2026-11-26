@@ -389,30 +389,18 @@ if (garaponHandle) {
     }
 
     garaponHandle.classList.add("is-turning");
-    garaponMachine?.classList.add("is-mixing");
 
-    garaponHandle.addEventListener("animationend", () => {
-      garaponHandle.classList.remove("is-turning");
-      garaponMachine?.classList.remove("is-mixing");
-    }, { once: true });
-
-  });
-}
-
-const garaponHandle = document.getElementById("garapon-handle");
-
-if (garaponHandle) {
-  garaponHandle.addEventListener("click", () => {
-
-    // Prevent repeated clicks during rotation
-    if (garaponHandle.classList.contains("is-turning")) {
-      return;
+    if (garaponMachine) {
+      garaponMachine.classList.add("is-mixing");
     }
 
-    garaponHandle.classList.add("is-turning");
-
     garaponHandle.addEventListener("animationend", () => {
       garaponHandle.classList.remove("is-turning");
+
+      if (garaponMachine) {
+        garaponMachine.classList.remove("is-mixing");
+      }
+
     }, { once: true });
 
   });
