@@ -384,6 +384,7 @@ if (drawButton) {
   drawButton.addEventListener("click", drawReflection);
 }
 
+
 /* Garapon handle and marble drop */
 
 const garaponHandle = document.getElementById("garapon-handle");
@@ -399,7 +400,8 @@ if (garaponHandle) {
     garaponHandle.classList.add("is-turning");
     garaponMachine?.classList.add("is-mixing");
 
-    garaponHandle.addEventListener("animationend", () => {
+    // Wait for the 360-degree handle rotation
+    setTimeout(() => {
 
       garaponHandle.classList.remove("is-turning");
       garaponMachine?.classList.remove("is-mixing");
@@ -409,17 +411,19 @@ if (garaponHandle) {
         return;
       }
 
-      // Create one falling glass marble
+      // Create the falling glass marble
       const fallingMarble = document.createElement("span");
       fallingMarble.className = "dropped-marble";
 
       garaponMachine.appendChild(fallingMarble);
 
-      fallingMarble.addEventListener("animationend", () => {
+      // Show the reflection after the marble drops
+      setTimeout(() => {
         fallingMarble.remove();
         drawReflection();
-      }, { once: true });
+      }, 700);
 
-    }, { once: true });
+    }, 850);
+
   });
 }
