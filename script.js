@@ -374,5 +374,5 @@ if (drawButton && result) {
       </div>
     `;
   });
-}
+} 
 
