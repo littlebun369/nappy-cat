@@ -523,4 +523,98 @@ footer {
     transform: rotate(360deg);
   }
 }
+/* Glass marbles inside the Garapon */
 
+.garapon-window {
+  overflow: hidden;
+}
+
+.inside-marble {
+  position: absolute;
+  display: block;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.45);
+  box-shadow:
+    inset -3px -4px 6px rgba(50,40,30,0.18),
+    inset 3px 3px 5px rgba(255,255,255,0.65),
+    1px 3px 5px rgba(50,40,30,0.2);
+}
+
+.inside-marble::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 7px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.85);
+  filter: blur(1px);
+}
+
+.marble-one {
+  left: 9px;
+  top: 39px;
+  background: radial-gradient(circle at 30% 25%,
+    #f0d9d5,
+    #bd8588 65%,
+    #95666d
+  );
+}
+
+.marble-two {
+  left: 31px;
+  top: 43px;
+  background: radial-gradient(circle at 30% 25%,
+    #e1e9dc,
+    #91a08b 65%,
+    #687963
+  );
+}
+
+.marble-three {
+  left: 22px;
+  top: 19px;
+  background: radial-gradient(circle at 30% 25%,
+    #e0e9ee,
+    #879daf 65%,
+    #647b91
+  );
+}
+
+/* Marbles tumble when the handle turns */
+
+.garapon-machine.is-mixing .marble-one {
+  animation: marbleMoveOne 0.8s ease-in-out;
+}
+
+.garapon-machine.is-mixing .marble-two {
+  animation: marbleMoveTwo 0.8s ease-in-out;
+}
+
+.garapon-machine.is-mixing .marble-three {
+  animation: marbleMoveThree 0.8s ease-in-out;
+}
+
+@keyframes marbleMoveOne {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  35% { transform: translate(25px, -12px) rotate(140deg); }
+  70% { transform: translate(38px, 15px) rotate(260deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes marbleMoveTwo {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  35% { transform: translate(-18px, -22px) rotate(160deg); }
+  70% { transform: translate(-8px, -35px) rotate(280deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes marbleMoveThree {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  35% { transform: translate(15px, 28px) rotate(120deg); }
+  70% { transform: translate(-20px, 18px) rotate(250deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
