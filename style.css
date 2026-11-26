@@ -897,3 +897,24 @@ background: radial-gradient(
   background: #d8c5ad;
   border-radius: 48% 48% 45% 45%;
 }
+/* Misty - rounded ears */
+
+.misty-ear {
+  position: absolute;
+  top: 0;
+  width: 29px;
+  height: 38px;
+  background: #d8c5ad;
+  border-radius: 65% 65% 25% 25%;
+  z-index: 1;
+}
+
+.misty-ear-left {
+  left: 22px;
+  transform: rotate(-18deg);
+}
+
+.misty-ear-right {
+  right: 22px;
+  transform: rotate(18deg);
+}
