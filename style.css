@@ -623,12 +623,13 @@ footer {
 
 .dropped-marble {
   position: absolute;
-  left: 76px;
-  top: 150px;
+  left: 100px;
+  top: 165px;
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  z-index: 20;
+  z-index: 50;
+  pointer-events: none;
 
   background: radial-gradient(
     circle at 30% 25%,
@@ -644,7 +645,7 @@ footer {
     inset 3px 3px 5px rgba(255,255,255,0.7),
     1px 3px 6px rgba(50,30,20,0.2);
 
-  animation: marbleDrop 0.8s ease-in forwards;
+  animation: marbleDrop 0.9s ease-in forwards;
 }
 
 @keyframes marbleDrop {
@@ -653,7 +654,8 @@ footer {
     opacity: 0;
   }
 
-  15% {
+  10% {
+    transform: translateY(0) scale(1);
     opacity: 1;
   }
 
@@ -663,7 +665,7 @@ footer {
   }
 
   100% {
-    transform: translateY(65px) scale(0.95);
-    opacity: 0;
+    transform: translateY(70px) scale(0.95);
+    opacity: 1;
   }
 }
