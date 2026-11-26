@@ -884,11 +884,11 @@ background: radial-gradient(
 
 .misty-body {
   position: absolute;
-  left: 15px;
+  left: 9px;
   bottom: 0;
-  width: 104px;
-  height: 92px;
-  background: #B8B9B3;
+  width: 112px;
+  height: 78px;
+  background: #B0B1BAB;
   border-radius: 50%;
   z-index: 1;
 }
@@ -901,7 +901,7 @@ background: radial-gradient(
   left: 25px;
   width: 80px;
   height: 80px;
-  background: #D6D6D1;
+  background: #DEDED9;
   border-radius: 50%;
   z-index: 3;
 }
@@ -936,7 +936,7 @@ background: radial-gradient(
   bottom: 8px;
   width: 18px;
   height: 38px;
-  background: #C9C9C4;
+  background: #B0B1AB;
   border-radius: 50%;
   transform: rotate(-30deg);
   z-index: 0;
