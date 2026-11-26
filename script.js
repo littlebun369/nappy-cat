@@ -71,6 +71,20 @@ roomTabs.forEach((tab) => {
 // Each entry:
 // [number, Chinese name, English hexagram name, English message, Chinese message]
 
+
+const marbleColours = [
+  "#B98789", "#C68F83", "#B87965", "#C6A080",
+  "#B9A78E", "#9D8D7D", "#B7A16D", "#91A08B",
+  "#858E78", "#829B98", "#729493", "#879DAF",
+  "#778A9C", "#A29AAF", "#AA8E9F", "#96999A"
+];
+
+function getMarbleColour(number) {
+  const index = Math.floor((Number(number) - 1) / 4);
+  return marbleColours[index] || "#B9A78E";
+}
+
+
 const reflections = [
   ["01", "乾為天", "The Creative",
     "A little courage can open a new sky.",
