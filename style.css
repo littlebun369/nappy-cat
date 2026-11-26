@@ -631,12 +631,13 @@ footer {
   z-index: 50;
   pointer-events: none;
 
-  background: radial-gradient(
-    circle at 30% 25%,
-    rgba(255,255,255,0.95),
-    rgba(185,135,137,0.85) 40%,
-    rgba(149,102,109,0.95) 80%
-  );
+background: radial-gradient(
+  circle at 30% 25%,
+  rgba(255,255,255,0.95),
+  var(--marble-colour) 45%,
+  var(--marble-colour) 80%
+);
+
 
   border: 1px solid rgba(255,255,255,0.65);
 
