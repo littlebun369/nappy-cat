@@ -343,40 +343,48 @@ const reflections = [
     "未完成，不代表失敗。前面的路仍在延伸，給自己多一點耐心，繼續走下去。"]
 ];
 
-// Garapon draw
+
+/* Garapon reflection draw */
+
 const drawButton = document.getElementById("draw-button");
 const result = document.getElementById("result");
 
-if (drawButton && result) {
-  drawButton.addEventListener("click", () => {
-    const item = reflections[
-      Math.floor(Math.random() * reflections.length)
-    ];
+function drawReflection() {
+  if (!result) return;
 
-    const [number, chineseName, englishName, englishMessage, chineseMessage] = item;
-    const marbleColour = getMarbleColour(number);
+  const item = reflections[
+    Math.floor(Math.random() * reflections.length)
+  ];
 
-    result.innerHTML = `
-      <div class="reflection-layout">
-        <div class="marble-display">
-          <div class="glass-marble" style="--marble-colour: ${marbleColour}">
-            <span>${number}</span>
-          </div>
-          <small>MARBLE ${number}</small>
+  const [number, chineseName, englishName, englishMessage, chineseMessage] = item;
+  const marbleColour = getMarbleColour(number);
+
+  result.innerHTML = `
+    <div class="reflection-layout">
+      <div class="marble-display">
+        <div class="glass-marble" style="--marble-colour: ${marbleColour}">
+          <span>${number}</span>
         </div>
-
-        <div class="reflection-message">
-          <h3>${chineseName}</h3>
-          <p class="hexagram-english">${englishName}</p>
-          <p class="message-english"><strong>${englishMessage}</strong></p>
-          <p class="message-chinese">${chineseMessage}</p>
-        </div>
+        <small>MARBLE ${number}</small>
       </div>
-    `;
-  });
-} 
 
-/* Garapon handle interaction */
+      <div class="reflection-message">
+        <h3>${chineseName}</h3>
+        <p class="hexagram-english">${englishName}</p>
+        <p class="message-english"><strong>${englishMessage}</strong></p>
+        <p class="message-chinese">${chineseMessage}</p>
+      </div>
+    </div>
+  `;
+}
+
+/* Keep the original draw button working */
+
+if (drawButton) {
+  drawButton.addEventListener("click", drawReflection);
+}
+
+/* Garapon handle and marble drop */
 
 const garaponHandle = document.getElementById("garapon-handle");
 const garaponMachine = document.querySelector(".garapon-machine");
@@ -389,20 +397,29 @@ if (garaponHandle) {
     }
 
     garaponHandle.classList.add("is-turning");
-
-    if (garaponMachine) {
-      garaponMachine.classList.add("is-mixing");
-    }
+    garaponMachine?.classList.add("is-mixing");
 
     garaponHandle.addEventListener("animationend", () => {
-      garaponHandle.classList.remove("is-turning");
 
-      if (garaponMachine) {
-        garaponMachine.classList.remove("is-mixing");
+      garaponHandle.classList.remove("is-turning");
+      garaponMachine?.classList.remove("is-mixing");
+
+      if (!garaponMachine) {
+        drawReflection();
+        return;
       }
 
-    }, { once: true });
+      // Create one falling glass marble
+      const fallingMarble = document.createElement("span");
+      fallingMarble.className = "dropped-marble";
 
+      garaponMachine.appendChild(fallingMarble);
+
+      fallingMarble.addEventListener("animationend", () => {
+        fallingMarble.remove();
+        drawReflection();
+      }, { once: true });
+
+    }, { once: true });
   });
 }
-
