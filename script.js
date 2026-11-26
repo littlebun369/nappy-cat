@@ -452,7 +452,7 @@ if (garaponHandle) {
 }
 
 
-/* Garapon handle and marble drop */
+/* Garapon handle and matching marble drop */
 
 const garaponHandle = document.getElementById("garapon-handle");
 const garaponMachine = document.querySelector(".garapon-machine");
@@ -464,33 +464,47 @@ if (garaponHandle) {
       return;
     }
 
+    // Select one reflection
+    const item = reflections[
+      Math.floor(Math.random() * reflections.length)
+    ];
+
+    const marbleColour = getMarbleColour(item[0]);
+
+    // Start the machine
     garaponHandle.classList.add("is-turning");
     garaponMachine?.classList.add("is-mixing");
 
-    // Wait for the 360-degree handle rotation
+    // Wait for the handle rotation
     setTimeout(() => {
 
       garaponHandle.classList.remove("is-turning");
       garaponMachine?.classList.remove("is-mixing");
 
       if (!garaponMachine) {
-        drawReflection();
+        showReflection(item);
         return;
       }
 
-      // Create the falling glass marble
+      // Create the matching glass marble
       const fallingMarble = document.createElement("span");
       fallingMarble.className = "dropped-marble";
 
+      fallingMarble.style.setProperty(
+        "--marble-colour",
+        marbleColour
+      );
+
       garaponMachine.appendChild(fallingMarble);
 
-      // Show the reflection after the marble drops
+      // Show the selected reflection
       setTimeout(() => {
         fallingMarble.remove();
-        drawReflection();
+        showReflection(item);
       }, 1000);
 
     }, 850);
 
   });
 }
+
