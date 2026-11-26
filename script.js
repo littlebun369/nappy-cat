@@ -344,19 +344,23 @@ const reflections = [
 ];
 
 
+
 /* Garapon reflection draw */
 
 const drawButton = document.getElementById("draw-button");
 const result = document.getElementById("result");
 
-function drawReflection() {
+function showReflection(item) {
   if (!result) return;
 
-  const item = reflections[
-    Math.floor(Math.random() * reflections.length)
-  ];
+  const [
+    number,
+    chineseName,
+    englishName,
+    englishMessage,
+    chineseMessage
+  ] = item;
 
-  const [number, chineseName, englishName, englishMessage, chineseMessage] = item;
   const marbleColour = getMarbleColour(number);
 
   result.innerHTML = `
@@ -378,10 +382,73 @@ function drawReflection() {
   `;
 }
 
+function drawReflection() {
+  const item = reflections[
+    Math.floor(Math.random() * reflections.length)
+  ];
+
+  showReflection(item);
+}
+
 /* Keep the original draw button working */
 
 if (drawButton) {
   drawButton.addEventListener("click", drawReflection);
+}
+
+/* Garapon handle and matching marble drop */
+
+const garaponHandle = document.getElementById("garapon-handle");
+const garaponMachine = document.querySelector(".garapon-machine");
+
+if (garaponHandle) {
+  garaponHandle.addEventListener("click", () => {
+
+    if (garaponHandle.classList.contains("is-turning")) {
+      return;
+    }
+
+    // Select the reflection before the machine turns
+    const item = reflections[
+      Math.floor(Math.random() * reflections.length)
+    ];
+
+    const marbleColour = getMarbleColour(item[0]);
+
+    garaponHandle.classList.add("is-turning");
+    garaponMachine?.classList.add("is-mixing");
+
+    // Wait for the handle rotation
+    setTimeout(() => {
+
+      garaponHandle.classList.remove("is-turning");
+      garaponMachine?.classList.remove("is-mixing");
+
+      if (!garaponMachine) {
+        showReflection(item);
+        return;
+      }
+
+      // Create a marble using the selected hexagram colour
+      const fallingMarble = document.createElement("span");
+      fallingMarble.className = "dropped-marble";
+
+      fallingMarble.style.setProperty(
+        "--marble-colour",
+        marbleColour
+      );
+
+      garaponMachine.appendChild(fallingMarble);
+
+      // Show the matching reflection after the marble drops
+      setTimeout(() => {
+        fallingMarble.remove();
+        showReflection(item);
+      }, 1000);
+
+    }, 850);
+
+  });
 }
 
 
