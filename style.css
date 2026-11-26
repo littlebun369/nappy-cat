@@ -884,8 +884,16 @@ background: radial-gradient(
   left: 15px;
   width: 100px;
   height: 85px;
-  background: #d8c5ad;
+
+  background: radial-gradient(
+    ellipse at 35% 25%,
+    #eee1d1 0%,
+    #d8c5ad 65%,
+    #c2ad93 100%
+  );
+
   border-radius: 48% 48% 42% 42%;
+  box-shadow: 0 5px 10px rgba(80,60,40,0.12);
 }
 
 .misty-head {
@@ -894,8 +902,16 @@ background: radial-gradient(
   left: 25px;
   width: 80px;
   height: 75px;
-  background: #d8c5ad;
+
+  background: radial-gradient(
+    ellipse at 35% 25%,
+    #eee1d1 0%,
+    #d8c5ad 65%,
+    #c2ad93 100%
+  );
+
   border-radius: 48% 48% 45% 45%;
+  box-shadow: 0 3px 8px rgba(80,60,40,0.10);
 }
 /* Misty - rounded ears */
 
