@@ -952,3 +952,36 @@ background: radial-gradient(
   transform-origin: bottom center;
   z-index: 0;
 }
+/* Misty - soft fur highlights */
+
+.misty-body::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 18px;
+  width: 74px;
+  height: 55px;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse,
+    rgba(255,255,255,0.22),
+    transparent 72%
+  );
+  pointer-events: none;
+}
+
+.misty-head::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 18px;
+  width: 45px;
+  height: 35px;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse,
+    rgba(255,255,255,0.25),
+    transparent 75%
+  );
+  pointer-events: none;
+}
