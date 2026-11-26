@@ -379,6 +379,27 @@ if (drawButton && result) {
 /* Garapon handle interaction */
 
 const garaponHandle = document.getElementById("garapon-handle");
+const garaponMachine = document.querySelector(".garapon-machine");
+
+if (garaponHandle) {
+  garaponHandle.addEventListener("click", () => {
+
+    if (garaponHandle.classList.contains("is-turning")) {
+      return;
+    }
+
+    garaponHandle.classList.add("is-turning");
+    garaponMachine?.classList.add("is-mixing");
+
+    garaponHandle.addEventListener("animationend", () => {
+      garaponHandle.classList.remove("is-turning");
+      garaponMachine?.classList.remove("is-mixing");
+    }, { once: true });
+
+  });
+}
+
+const garaponHandle = document.getElementById("garapon-handle");
 
 if (garaponHandle) {
   garaponHandle.addEventListener("click", () => {
