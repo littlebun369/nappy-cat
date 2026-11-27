@@ -991,3 +991,15 @@ background: radial-gradient(
   transform: rotate(-30deg);
   z-index: 0;
 }
+
+/* Bamboo leaf visibility test */
+
+.bamboo-leaf {
+  display: block !important;
+  position: absolute;
+  width: 30px;
+  height: 12px;
+  background: #91A184 !important;
+  border-radius: 100% 0 100% 0;
+  z-index: 20;
+}
