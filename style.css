@@ -756,23 +756,32 @@ background: radial-gradient(
   }
 }
 
-/* Misty room - wooden window */
+
+/* =================================
+   MISTY ROOM - COMPLETE DESIGN
+   ================================= */
+
+/* Round wooden window */
 
 .misty-window {
   position: absolute;
-  top: 45px;
+  top: 35px;
   left: 50%;
   transform: translateX(-50%);
-  width: 190px;
-  height: 145px;
+  width: 168px;
+  height: 168px;
   background: #e9e3d4;
   border: 9px solid #987b5d;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 2;
   box-shadow: 0 4px 10px rgba(70,50,30,0.15);
 }
 
-.window-frame {z-index: 5;
+.window-frame {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background:
     linear-gradient(
       90deg,
@@ -792,12 +801,13 @@ background: radial-gradient(
 
 /* Bamboo */
 
-.misty-bamboo { z-index: 5;
+.misty-bamboo {
   position: absolute;
   bottom: 85px;
   left: 35px;
   width: 85px;
   height: 155px;
+  z-index: 3;
 }
 
 .misty-bamboo span {
@@ -839,7 +849,6 @@ background: radial-gradient(
   transform: rotate(18deg);
 }
 
-
 /* Bamboo leaves */
 
 .bamboo-leaf {
@@ -850,7 +859,6 @@ background: radial-gradient(
   background: #91A184;
   border-radius: 100% 0 100% 0;
   z-index: 2;
-
   border: 0;
   outline: 0;
   box-shadow: none;
@@ -901,7 +909,7 @@ background: radial-gradient(
   bottom: 95px;
   width: 65px;
   height: 65px;
-  z-index: 3;
+  z-index: 4;
 }
 
 .incense-burner {
@@ -925,9 +933,43 @@ background: radial-gradient(
   border-radius: 50%;
 }
 
+/* Misty character placeholder */
 
+.character-placeholder {
+  position: absolute;
+  z-index: 6;
+  left: 50%;
+  bottom: 75px;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 150px;
+  margin: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 0;
+  color: transparent;
+}
 
-/* Misty - simple grey cat */
+/* Round cushion */
+
+.character-placeholder::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  width: 145px;
+  height: 32px;
+  background: #D8C8AD;
+  border-radius: 50%;
+  border: 2px solid #C2AE91;
+  box-shadow: 0 4px 6px rgba(70,50,30,0.15);
+  z-index: 0;
+}
+
+/* Misty cat */
 
 .misty-cat {
   position: absolute;
@@ -936,9 +978,10 @@ background: radial-gradient(
   transform: translateX(-50%);
   width: 130px;
   height: 140px;
+  z-index: 1;
 }
 
-/* Misty - oval grey body */
+/* Oval grey body */
 
 .misty-body {
   position: absolute;
@@ -949,41 +992,6 @@ background: radial-gradient(
   background: #B0B1AB;
   border-radius: 50%;
   z-index: 1;
-}
-
-/* Round head */
-
-.misty-head {
-  position: absolute;
-  top: 0;
-  left: 25px;
-  width: 80px;
-  height: 80px;
-  background: #DEDED9;
-  border-radius: 50%;
-  z-index: 3;
-}
-
-/* Pointed triangular ears */
-
-.misty-ear {
-  position: absolute;
-  top: -8px;
-  width: 27px;
-  height: 38px;
-  background: #D6D6D1;
-  clip-path: polygon(50% 0, 100% 100%, 0 100%);
-  z-index: 2;
-}
-
-.misty-ear-left {
-  left: 25px;
-  transform: rotate(-12deg);
-}
-
-.misty-ear-right {
-  right: 25px;
-  transform: rotate(12deg);
 }
 
 /* Simple tail */
@@ -1000,3 +1008,37 @@ background: radial-gradient(
   z-index: 0;
 }
 
+/* Smaller round head */
+
+.misty-head {
+  position: absolute;
+  top: 8px;
+  left: 32px;
+  width: 66px;
+  height: 66px;
+  background: #DEDED9;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+/* Pointed ears */
+
+.misty-ear {
+  position: absolute;
+  top: 0;
+  width: 23px;
+  height: 32px;
+  background: #D6D6D1;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  z-index: 2;
+}
+
+.misty-ear-left {
+  left: 30px;
+  transform: rotate(-12deg);
+}
+
+.misty-ear-right {
+  right: 30px;
+  transform: rotate(12deg);
+}
