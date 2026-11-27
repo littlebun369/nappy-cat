@@ -48,8 +48,12 @@ const rooms = {
   }
 };
 
-// Room switching
+
+/* Room switching */
+
 const roomTabs = document.querySelectorAll(".room-tab");
+const character = document.getElementById("character");
+const scene = document.getElementById("room-scene");
 
 roomTabs.forEach((tab) => {
   tab.addEventListener("click", () => {
@@ -63,9 +67,79 @@ roomTabs.forEach((tab) => {
     document.getElementById("room-name").textContent = room.name;
     document.getElementById("room-theme").textContent = room.theme;
     document.getElementById("room-description").textContent = room.description;
-    
-const character = document.getElementById("character");
-const scene = document.getElementById("room-scene");
+
+    scene.querySelector(".mochi-room-decor")?.remove();
+    scene.classList.remove("room-mochi");
+
+    if (tab.dataset.room === "mochi") {
+
+      character.innerHTML = `
+        <div class="mochi-cat">
+          <div class="mochi-tail"></div>
+          <div class="mochi-body"></div>
+          <div class="mochi-ear mochi-ear-left"></div>
+          <div class="mochi-ear mochi-ear-right"></div>
+          <div class="mochi-head">
+            <span class="mochi-eye mochi-eye-left"></span>
+            <span class="mochi-eye mochi-eye-right"></span>
+            <span class="mochi-nose"></span>
+          </div>
+        </div>
+      `;
+
+      scene.insertAdjacentHTML("beforeend", `
+        <div class="mochi-room-decor">
+
+          <div class="mochi-wind-chime">
+            <div class="wind-chime-string"></div>
+            <div class="wind-chime-bell"></div>
+            <div class="wind-chime-paper"></div>
+          </div>
+
+          <div class="mochi-milk-carton">
+            <div class="milk-top"></div>
+            <span class="milk-label">MILK</span>
+          </div>
+
+          <div class="mochi-cat-mug">
+            <div class="mug-ear mug-ear-left"></div>
+            <div class="mug-ear mug-ear-right"></div>
+            <div class="mug-handle"></div>
+            <div class="mug-face">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+        </div>
+      `);
+
+      scene.classList.add("room-mochi");
+      scene.style.background = "#efe3d1";
+
+    } else if (tab.dataset.room === "misty") {
+
+      character.innerHTML = `
+        <div class="misty-cat">
+          <div class="misty-tail"></div>
+          <div class="misty-body"></div>
+          <div class="misty-ear misty-ear-left"></div>
+          <div class="misty-ear misty-ear-right"></div>
+          <div class="misty-head"></div>
+        </div>
+      `;
+
+      scene.style.background = "";
+
+    } else {
+
+      character.textContent = room.character;
+      scene.style.background = room.background;
+
+    }
+  });
+});
+
 
 if (tab.dataset.room === "mochi") {
   character.innerHTML = `
