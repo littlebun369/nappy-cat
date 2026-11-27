@@ -880,7 +880,7 @@ background: radial-gradient(
   height: 140px;
 }
 
-/* Oval body */
+/* Misty - oval grey body */
 
 .misty-body {
   position: absolute;
@@ -888,7 +888,7 @@ background: radial-gradient(
   bottom: 0;
   width: 112px;
   height: 78px;
-  background: #B0B1BAB;
+  background: #B0B1AB;
   border-radius: 50%;
   z-index: 1;
 }
