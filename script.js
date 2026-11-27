@@ -63,7 +63,42 @@ roomTabs.forEach((tab) => {
     document.getElementById("room-name").textContent = room.name;
     document.getElementById("room-theme").textContent = room.theme;
     document.getElementById("room-description").textContent = room.description;
-    document.getElementById("character").textContent = room.character;
+    
+const character = document.getElementById("character");
+const scene = document.getElementById("room-scene");
+
+if (tab.dataset.room === "mochi") {
+  character.innerHTML = `
+    <div class="mochi-cat">
+      <div class="mochi-tail"></div>
+      <div class="mochi-body"></div>
+      <div class="mochi-ear mochi-ear-left"></div>
+      <div class="mochi-ear mochi-ear-right"></div>
+      <div class="mochi-head">
+        <span class="mochi-eye mochi-eye-left"></span>
+        <span class="mochi-eye mochi-eye-right"></span>
+      </div>
+    </div>
+  `;
+  scene.classList.add("room-mochi");
+
+} else if (tab.dataset.room === "misty") {
+  character.innerHTML = `
+    <div class="misty-cat">
+      <div class="misty-tail"></div>
+      <div class="misty-body"></div>
+      <div class="misty-ear misty-ear-left"></div>
+      <div class="misty-ear misty-ear-right"></div>
+      <div class="misty-head"></div>
+    </div>
+  `;
+  scene.classList.remove("room-mochi");
+
+} else {
+  character.textContent = room.character;
+  scene.classList.remove("room-mochi");
+}
+
     document.getElementById("room-scene").style.background = room.background;
   });
 });
