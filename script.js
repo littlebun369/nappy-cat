@@ -1,5 +1,5 @@
 
-/* NAPPY SPACE
+/* NAPPY SPACE 
    64 Little Messages
    Original reflections inspired by the 64 I Ching hexagrams.
    Not fortune-telling.
