@@ -1003,3 +1003,11 @@ background: radial-gradient(
   border-radius: 100% 0 100% 0;
   z-index: 20;
 }
+.bamboo-leaf {
+  display: block !important;
+  width: 30px !important;
+  height: 15px !important;
+  background: #91A184 !important;
+  z-index: 20 !important;
+  outline: 1px solid red;
+}
