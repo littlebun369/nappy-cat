@@ -20,7 +20,7 @@ const rooms = {
     theme: "Love & Connection",
     description: "A little reminder that connection can be found in simple moments.",
     character: "Mochi's little world",
-    background: "#e9dedc"
+    background: "#efe3d1"
   },
   susu: {
     number: "ROOM 03",
