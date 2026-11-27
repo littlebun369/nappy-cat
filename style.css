@@ -839,6 +839,52 @@ background: radial-gradient(
   transform: rotate(18deg);
 }
 
+/* Bamboo leaves */
+
+.bamboo-leaf {
+  position: absolute;
+  width: 25px;
+  height: 9px;
+  background: #91A184;
+  border-radius: 100% 0 100% 0;
+  z-index: 2;
+}
+
+.leaf-1 {
+  left: 8px;
+  top: 18px;
+  transform: rotate(25deg);
+}
+
+.leaf-2 {
+  left: 35px;
+  top: 38px;
+  transform: rotate(-35deg);
+}
+
+.leaf-3 {
+  left: 48px;
+  top: 12px;
+  transform: rotate(35deg);
+}
+
+.leaf-4 {
+  left: 58px;
+  top: 65px;
+  transform: rotate(-25deg);
+}
+
+.leaf-5 {
+  left: 0;
+  top: 75px;
+  transform: rotate(30deg);
+}
+
+.leaf-6 {
+  left: 28px;
+  top: 100px;
+  transform: rotate(-30deg);
+}
 /* Incense burner */
 
 .misty-incense {
