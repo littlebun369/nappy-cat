@@ -70,8 +70,8 @@ roomTabs.forEach((tab) => {
 
     scene.querySelector(".mochi-room-decor")?.remove();
     scene.classList.remove("room-mochi");
-
-
+  });
+});
 
 // Each entry:
 // [number, Chinese name, English hexagram name, English message, Chinese message]
