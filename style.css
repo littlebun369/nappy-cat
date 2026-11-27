@@ -1147,3 +1147,270 @@ background: radial-gradient(
 .mochi-eye-right {
   right: 19px;
 }
+
+/* =================================
+   MOCHI - CREAM LATTE ROOM
+   ================================= */
+
+/* Hide Misty's decorations in Mochi's room */
+
+.room-mochi .misty-window,
+.room-mochi .misty-bamboo,
+.room-mochi .misty-incense {
+  display: none;
+}
+
+/* Mochi character */
+
+.mochi-cat {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 140px;
+  z-index: 1;
+}
+
+.mochi-body {
+  position: absolute;
+  left: 5px;
+  bottom: 0;
+  width: 130px;
+  height: 88px;
+  background: #D6BE9E;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.mochi-tail {
+  position: absolute;
+  right: -5px;
+  bottom: 10px;
+  width: 22px;
+  height: 38px;
+  background: #D6BE9E;
+  border-radius: 50%;
+  transform: rotate(-30deg);
+  z-index: 0;
+}
+
+.mochi-head {
+  position: absolute;
+  top: 8px;
+  left: 34px;
+  width: 72px;
+  height: 72px;
+  background: #F1E5D3;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.mochi-ear {
+  position: absolute;
+  top: 0;
+  width: 24px;
+  height: 32px;
+  background: #E4D2B9;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  z-index: 2;
+}
+
+.mochi-ear-left {
+  left: 34px;
+  transform: rotate(-12deg);
+}
+
+.mochi-ear-right {
+  right: 34px;
+  transform: rotate(12deg);
+}
+
+/* Two round black eyes */
+
+.mochi-eye {
+  position: absolute;
+  top: 34px;
+  width: 9px;
+  height: 9px;
+  background: #302923;
+  border-radius: 50%;
+}
+
+.mochi-eye-left {
+  left: 19px;
+}
+
+.mochi-eye-right {
+  right: 19px;
+}
+
+/* Small pink nose */
+
+.mochi-nose {
+  position: absolute;
+  top: 49px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #D98F91;
+}
+
+/* Mochi room decorations */
+
+.mochi-room-decor {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* Wind chime */
+
+.mochi-wind-chime {
+  position: absolute;
+  top: 18px;
+  right: 75px;
+  width: 45px;
+  height: 95px;
+}
+
+.wind-chime-string {
+  position: absolute;
+  top: 0;
+  left: 22px;
+  height: 35px;
+  border-left: 1px solid #9B846B;
+}
+
+.wind-chime-bell {
+  position: absolute;
+  top: 32px;
+  left: 10px;
+  width: 25px;
+  height: 30px;
+  background: #D8C6A9;
+  border: 1px solid #B9A486;
+  border-radius: 5px 5px 14px 14px;
+}
+
+.wind-chime-paper {
+  position: absolute;
+  top: 61px;
+  left: 19px;
+  width: 8px;
+  height: 30px;
+  background: #E8D8BC;
+  border: 1px solid #C6B293;
+  border-radius: 2px;
+}
+
+/* Milk carton */
+
+.mochi-milk-carton {
+  position: absolute;
+  left: 22%;
+  bottom: 88px;
+  width: 43px;
+  height: 57px;
+  background: #F5F0E5;
+  border: 1px solid #D5C7B0;
+  border-radius: 4px;
+  box-shadow: 1px 3px 5px rgba(70,50,30,0.12);
+}
+
+.milk-top {
+  position: absolute;
+  top: -9px;
+  left: 7px;
+  width: 27px;
+  height: 12px;
+  background: #D9C8AA;
+  clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+}
+
+.milk-label {
+  display: block;
+  margin-top: 24px;
+  text-align: center;
+  font-size: 9px;
+  font-weight: 800;
+  color: #A58D70;
+}
+
+/* Cat-shaped mug */
+
+.mochi-cat-mug {
+  position: absolute;
+  right: 22%;
+  bottom: 88px;
+  width: 48px;
+  height: 38px;
+  background: #E9D8C0;
+  border: 1px solid #CBB79B;
+  border-radius: 5px 5px 13px 13px;
+  box-shadow: 1px 3px 5px rgba(70,50,30,0.12);
+}
+
+.mug-ear {
+  position: absolute;
+  top: -8px;
+  width: 13px;
+  height: 14px;
+  background: #E9D8C0;
+  border: 1px solid #CBB79B;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.mug-ear-left {
+  left: 3px;
+}
+
+.mug-ear-right {
+  right: 3px;
+}
+
+.mug-handle {
+  position: absolute;
+  right: -13px;
+  top: 8px;
+  width: 15px;
+  height: 19px;
+  border: 4px solid #CBB79B;
+  border-left: 0;
+  border-radius: 0 10px 10px 0;
+}
+
+.mug-face {
+  position: absolute;
+  top: 13px;
+  left: 14px;
+  display: flex;
+  gap: 8px;
+}
+
+.mug-face span {
+  width: 4px;
+  height: 4px;
+  background: #78695A;
+  border-radius: 50%;
+}
+
+/* Small screen positioning */
+
+@media (max-width: 600px) {
+  .mochi-wind-chime {
+    right: 28px;
+  }
+
+  .mochi-milk-carton {
+    left: 8%;
+  }
+
+  .mochi-cat-mug {
+    right: 10%;
+  }
+}
