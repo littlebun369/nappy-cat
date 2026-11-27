@@ -1010,3 +1010,6 @@ background: radial-gradient(
   background: #91A184 !important;
   z-index: 20 !important;
 }
+.bamboo-leaf {
+  outline: none !important;
+}
