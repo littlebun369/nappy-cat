@@ -1042,3 +1042,108 @@ background: radial-gradient(
   right: 30px;
   transform: rotate(12deg);
 }
+
+/* =================================
+   MOCHI - CREAM LATTE CAT
+   ================================= */
+
+/* Hide Misty's room decorations */
+
+.room-scene.room-mochi .misty-window,
+.room-scene.room-mochi .misty-bamboo,
+.room-scene.room-mochi .misty-incense {
+  display: none;
+}
+
+/* Mochi character */
+
+.mochi-cat {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 140px;
+  z-index: 1;
+}
+
+/* Fatter rounded body */
+
+.mochi-body {
+  position: absolute;
+  left: 5px;
+  bottom: 0;
+  width: 130px;
+  height: 88px;
+  background: #D6BE9E;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Short rounded tail */
+
+.mochi-tail {
+  position: absolute;
+  right: -5px;
+  bottom: 10px;
+  width: 22px;
+  height: 38px;
+  background: #D6BE9E;
+  border-radius: 50%;
+  transform: rotate(-30deg);
+  z-index: 0;
+}
+
+/* Cream latte head */
+
+.mochi-head {
+  position: absolute;
+  top: 8px;
+  left: 34px;
+  width: 72px;
+  height: 72px;
+  background: #F1E5D3;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+/* Small rounded ears */
+
+.mochi-ear {
+  position: absolute;
+  top: 0;
+  width: 24px;
+  height: 32px;
+  background: #E4D2B9;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  z-index: 2;
+}
+
+.mochi-ear-left {
+  left: 34px;
+  transform: rotate(-12deg);
+}
+
+.mochi-ear-right {
+  right: 34px;
+  transform: rotate(12deg);
+}
+
+/* Gentle closed eyes */
+
+.mochi-eye {
+  position: absolute;
+  top: 41px;
+  width: 12px;
+  height: 6px;
+  border-bottom: 2px solid #78695A;
+  border-radius: 50%;
+}
+
+.mochi-eye-left {
+  left: 19px;
+}
+
+.mochi-eye-right {
+  right: 19px;
+}
